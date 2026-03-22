@@ -2,7 +2,7 @@ import { fetchAllMedia, fetchModules } from "@/lib/notion";
 import { computeLayout } from "@/lib/correlation";
 import Canvas from "@/components/Canvas";
 
-export const revalidate = 60; // revalidate data every 60 seconds
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
   let modules: Awaited<ReturnType<typeof fetchModules>> = [];
